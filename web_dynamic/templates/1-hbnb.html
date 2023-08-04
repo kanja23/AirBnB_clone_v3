@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dynamic HBNB</title>
+    <!-- Import jQuery in the <head> tag -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Import the JavaScript static/scripts/1-hbnb.js in the <head> tag -->
+    <script src="/static/scripts/1-hbnb.js?cache_id={{ cache_id }}"></script>
+    <style>
+        /* Add custom CSS to position the checkbox */
+        li input[type="checkbox"] {
+            position: absolute;
+            left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Your HTML content for the dynamic HBNB page goes here -->
+    <!-- For example, you can have a div to display the filters -->
+    <div id="filters">
+        <ul>
+            <!-- Loop through the amenities and display each as a list item -->
+            {% for amenity in amenities %}
+                <li>
+                    <!-- Add the checkbox to the li tag of each amenity -->
+                    <input type="checkbox" data-id="{{ amenity.id }}" data-name="{{ amenity.name }}">
+                    <!-- Display the amenity name next to the checkbox -->
+                    {{ amenity.name }}
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
