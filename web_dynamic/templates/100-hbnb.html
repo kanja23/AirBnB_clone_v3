@@ -1,0 +1,33 @@
+<!-- web_dynamic/templates/100-hbnb.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>100-HBNB</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/3-header.css') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename='scripts/100-hbnb.js') }}"></script>
+</head>
+<body>
+    <!-- Your HTML content here -->
+
+    <!-- Add the new div element in the header tag -->
+    <header>
+        <div id="api_status" class="available"></div>
+        <!-- Your header content here -->
+    </header>
+
+    <!-- Your remaining HTML content here -->
+    <button id="search-button">Search</button>
+    <ul>
+        <!-- State filters with checkboxes -->
+        <li><input type="checkbox" data-id="state_id" data-name="state_name">State 1</li>
+        <li><input type="checkbox" data-id="state_id" data-name="state_name">State 2</li>
+        <!-- Add more states here as needed -->
+    </ul>
+    <ul>
+        <!-- City filters with checkboxes -->
+        <li><input type="checkbox" data-id="city_id" data-name="city_name">City 1</li>
+        <li><input type="checkbox" data-id="city_id" data-name="city_name">City 2</li>
+        <!-- Add more cities here as needed -->
+    </ul>
+</body>
+</html>
